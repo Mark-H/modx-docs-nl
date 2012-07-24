@@ -9,13 +9,14 @@ Een snippet moet dus aan de volgende eisen voldoen:
 
 Een voorbeeld van een “helloWorld” snippet:
 
-<?php
-$name = $modx->getOption('name', $scriptProperties, 'Anonymous Coward');
-return "Hi there, {$name}!";
+
+    <?php
+    $name = $modx->getOption('name', $scriptProperties, 'Anonymous Coward');
+    return "Hi there, {$name}!";
 
 Wat je als volgt in je template zou aanroepen:
 
-[[helloWorld? &name=’John Doe’]]
+    [[helloWorld? &name=’John Doe’]]
 
 wat het volgende tot resultaat zou hebben:
 
@@ -47,20 +48,20 @@ Wat we dan kunnen doen is een chunk gebruiken als tpl (“template”) en om daa
 
 Naast onze snippet gebruiken we dan dus ook een chunk. Neem als voorbeeld het volgende (naam: helloWorldTpl):
 
-Hi there, [[+name]]!
+    Hi there, [[+name]]!
 
 In onze snippet roepen we die dan als volgt aan:
 
-<?php
-$name = $modx->getOption('name', $scriptProperties, 'Anonymous Coward');
-return $modx->getChunk('helloWorldTpl', array ('name' => $name));
+    <?php
+    $name = $modx->getOption('name', $scriptProperties, 'Anonymous Coward');
+    return $modx->getChunk('helloWorldTpl', array ('name' => $name));
 
 Nu kan de gebruiker van de snippet dus gewoon de chunk helloWorldTpl aanpassen als deze een andere tekst of extra html wil hebben. Nu is het enige probleem nog dat wanneer we deze snippet als Extra aan gaan bieden, mensen mogelijk een keer gaan updaten waarbij de chunk ookweer veranderd wordt. Dus gaan we nog een stapje verder, en gebruiken we ook een property voor de naam van de chunk.
 
-<?php
-$name = $modx->getOption('name', $scriptProperties, 'Anonymous Coward');
-$tpl = $modx->getOption('tpl', $scriptProperties, 'helloWorldTpl');
-return $modx->getChunk($tpl, array ('name' => $name));
+    <?php
+    $name = $modx->getOption('name', $scriptProperties, 'Anonymous Coward');
+    $tpl = $modx->getOption('tpl', $scriptProperties, 'helloWorldTpl');
+    return $modx->getChunk($tpl, array ('name' => $name));
 
 Nu kan de eindgebruiker de chunk simpelweg dupliceren, en de nieuwe naam meegeven aan de snippet in de tpl property.
 
