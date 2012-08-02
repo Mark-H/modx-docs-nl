@@ -4,7 +4,7 @@ modx-docs-nl
 Github source of upcoming Dutch MODX Documentation... Fork, improve &amp; send pull requests!
 
 ## About this Repository
-Thus repository contains a work in progress documentation source. While only loosely organized at this point, we will hopefully see this repository gain strenght and structure as times go by and contributors hop aboard. This repo will hopefully power a less technical front end view at some point. 
+This repository contains a work in progress documentation source. While only loosely organized at this point, we will hopefully see this repository gain strenght and structure as times go by and contributors hop aboard. This repo will hopefully power a less technical front end view at some point. 
 
 ## For contributors
 
