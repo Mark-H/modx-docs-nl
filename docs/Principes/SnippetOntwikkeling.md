@@ -1,4 +1,4 @@
-# Snippets Ontwikkelen
+# Snippet Ontwikkeling
 
 Zoals op de Tag Syntax pagina uitgelegd, is een snippet het makkelijkste te vergelijken met een PHP functie: je roept hem aan waarbij je properties (parameters) meegeeft, en de snippet geeft dan het resultaat daarvan terug.
 

@@ -13,7 +13,7 @@ MODX zal nu urls bouwen op basis van de resource aliases en die van de bovenligg
 
 ## 2. Instellen van de Server.
 
-- apache, of nginx/IIS met volledige htaccess functionaliteiten (mod rewrite): hernoem ht.access in de root van de site naar .htaccess. Indien de MODX installatie niet in de root is geplaatst, pas dan ook de RewriteBase aan.
+- apache, of nginx met apache reverse proxy/IIS met volledige htaccess functionaliteiten (mod rewrite): hernoem ht.access in de root van de site naar .htaccess. Indien de MODX installatie niet in de root is geplaatst, pas dan ook de RewriteBase aan.
 - IIS zonder mod rewrite
 - nginx zonder mod rewrite
 - ....
